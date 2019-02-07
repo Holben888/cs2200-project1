@@ -3,7 +3,6 @@
 
 main:	lea $sp, initsp                         ! initialize the stack pointer
         lw $sp, 0($sp)                          ! finish initialization
-
         lea $a0, BASE                           ! load base for pow
         lw $a0, 0($a0)
         lea $a1, EXP                            ! load power for pow
@@ -12,10 +11,8 @@ main:	lea $sp, initsp                         ! initialize the stack pointer
         jalr $ra, $at                           ! run pow
         lea $a0, ANS                            ! load base for pow
         sw $v0, 0($a0)
-
         halt                                    ! stop the program here
         addi $v0, $zero, -1                     ! load a bad value on failure to halt
-
 BASE:   .fill 2
 EXP:    .fill 8
 ANS:	.fill 0                                 ! should come out to 256 (BASE^EXP)

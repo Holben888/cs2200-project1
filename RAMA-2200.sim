@@ -1,7 +1,7 @@
 {
   "version": "1.8.2",
   "globalBitSize": 32,
-  "clockSpeed": 1,
+  "clockSpeed": 2,
   "circuits": [
     {
       "name": "Datapath",
@@ -625,6 +625,18 @@
         },
         {
           "name": "com.ra4king.circuitsim.gui.peers.arithmetic.BitExtenderPeer",
+          "x": 98,
+          "y": 33,
+          "properties": {
+            "Input Bitsize": "20",
+            "Label location": "NORTH",
+            "Output Bitsize": "32",
+            "Label": "",
+            "Extension Type": "SIGN"
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.arithmetic.BitExtenderPeer",
           "x": 21,
           "y": 69,
           "properties": {
@@ -667,18 +679,6 @@
             "Input Bitsize": "32",
             "Label location": "NORTH",
             "Output Bitsize": "4",
-            "Label": "",
-            "Extension Type": "ZERO"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.arithmetic.BitExtenderPeer",
-          "x": 98,
-          "y": 33,
-          "properties": {
-            "Input Bitsize": "20",
-            "Label location": "NORTH",
-            "Output Bitsize": "32",
             "Label": "",
             "Extension Type": "ZERO"
           }
@@ -741,15 +741,13 @@
           }
         },
         {
-          "name": "com.ra4king.circuitsim.gui.peers.wiring.PinPeer",
-          "x": 29,
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ClockPeer",
+          "x": 23,
           "y": 52,
           "properties": {
-            "Label location": "WEST",
-            "Label": "CLK",
-            "Is input?": "Yes",
-            "Direction": "SOUTH",
-            "Bitsize": "1"
+            "Label location": "NORTH",
+            "Label": "",
+            "Direction": "EAST"
           }
         },
         {
@@ -1100,6 +1098,12 @@
         },
         {
           "x": 25,
+          "y": 53,
+          "length": 5,
+          "isHorizontal": true
+        },
+        {
+          "x": 25,
           "y": 71,
           "length": 2,
           "isHorizontal": true
@@ -1121,6 +1125,12 @@
           "y": 22,
           "length": 3,
           "isHorizontal": true
+        },
+        {
+          "x": 30,
+          "y": 53,
+          "length": 1,
+          "isHorizontal": false
         },
         {
           "x": 32,
@@ -4859,6 +4869,18 @@
         },
         {
           "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
+          "x": 30,
+          "y": 10,
+          "properties": {
+            "Label location": "NORTH",
+            "Label": "",
+            "Value": "0",
+            "Direction": "EAST",
+            "Bitsize": "32"
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.wiring.ConstantPeer",
           "x": 69,
           "y": 41,
           "properties": {
@@ -5264,6 +5286,18 @@
           "x": 36,
           "y": 22,
           "length": 3,
+          "isHorizontal": true
+        },
+        {
+          "x": 38,
+          "y": 13,
+          "length": 4,
+          "isHorizontal": false
+        },
+        {
+          "x": 38,
+          "y": 17,
+          "length": 1,
           "isHorizontal": true
         },
         {
@@ -6339,14 +6373,14 @@
         },
         {
           "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 13,
-          "y": 24,
+          "x": 42,
+          "y": 20,
           "properties": {
             "Label location": "NORTH",
-            "Contents": "03 00 06 09 10 4-00 0d 6-00",
-            "Label": "Sequence",
-            "Bitsize": "6",
-            "Address bits": "4"
+            "Contents": "0006201 0001082 0e00900 0084044 0108045 0020100 0084047 0008408 0020100 008404a 000840b 000210c 0020080 000420e 000840f 0020100 0084051 0008412 0002113 0040040 0004055 0088056 0210117 1000000 0004219 000841a 0000900 000405c 008805d 2210117 008405f 0108060 0420100 0020222 0080840 0000023 28-0000000",
+            "Label": "",
+            "Bitsize": "26",
+            "Address bits": "6"
           }
         },
         {
@@ -6359,30 +6393,6 @@
             "Output Bitsize": "6",
             "Label": "",
             "Extension Type": "ZERO"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 42,
-          "y": 20,
-          "properties": {
-            "Label location": "NORTH",
-            "Contents": "0006201 0001082 0e00900 0084044 0108045 0020100 0084047 0008408 0020100 008404a 000840b 000210c 0020080 000420e 000840f 0020100 0084051 0008412 0002113 0040040 44-0000000",
-            "Label": "",
-            "Bitsize": "26",
-            "Address bits": "6"
-          }
-        },
-        {
-          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
-          "x": 13,
-          "y": 34,
-          "properties": {
-            "Label location": "NORTH",
-            "Contents": "2-00 14-0",
-            "Label": "CMP",
-            "Bitsize": "6",
-            "Address bits": "1"
           }
         },
         {
@@ -6446,6 +6456,18 @@
             "Bit 0": "None",
             "Bit 10": "4",
             "Bit 11": "5"
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
+          "x": 13,
+          "y": 24,
+          "properties": {
+            "Label location": "NORTH",
+            "Contents": "03 1e 06 09 10 14 21 23 1b 0d 6-00",
+            "Label": "Sequence",
+            "Bitsize": "6",
+            "Address bits": "4"
           }
         },
         {
@@ -6700,6 +6722,18 @@
             "Label": "OPTest",
             "Direction": "WEST",
             "Bitsize": "1"
+          }
+        },
+        {
+          "name": "com.ra4king.circuitsim.gui.peers.memory.ROMPeer",
+          "x": 13,
+          "y": 34,
+          "properties": {
+            "Label location": "NORTH",
+            "Contents": "00 18 14-0",
+            "Label": "CMP",
+            "Bitsize": "6",
+            "Address bits": "1"
           }
         },
         {
