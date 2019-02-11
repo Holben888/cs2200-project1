@@ -13,8 +13,8 @@ main:	lea $sp, initsp                         ! initialize the stack pointer
         sw $v0, 0($a0)
         halt                                    ! stop the program here
         addi $v0, $zero, -1                     ! load a bad value on failure to halt
-BASE:   .fill 2
-EXP:    .fill 8
+BASE:   .fill 3
+EXP:    .fill 3
 ANS:	.fill 0                                 ! should come out to 256 (BASE^EXP)
 
 POW:    addi $sp, $sp, -1                       ! allocate space for old frame pointer
